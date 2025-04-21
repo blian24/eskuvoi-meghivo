@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esküvői Meghívó</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+    }
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('20240922_125624.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+    .ribbon {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 33%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      animation: slideDown 2s ease-out forwards;
+      animation-delay: 2s;
+      z-index: 10;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+    .ribbon .logo {
+      width: 70%;
+      height: auto;
+      margin: 10% 0 2% 0;
+      border: none;
+      animation: logoSleep 1.5s ease-in-out infinite alternate;
+      animation-delay: 6s;
+      animation-play-state: paused;
+    }
+    .ribbon .logo.sleeping {
+      animation-play-state: running;
+    }
+    .ribbon .text {
+      width: 70%;
+      font-size: 1.6rem;
+      line-height: 1.9;
+      text-align: justify;
+      color: #a8925d;
+    }
+    .cat {
+      position: absolute;
+      bottom: 0;
+      right: -300px;
+      width: 150px;
+      height: auto;
+      animation: catWalk 6s ease-in-out forwards;
+      animation-delay: 4s;
+      z-index: 5;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      to { top: 0; }
+    }
+    @keyframes catWalk {
+      0% { right: -300px; }
+      60% { right: 30px; }
+      100% { right: 30px; transform: rotate(-5deg); }
+    }
+    @keyframes logoSleep {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.02); }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.querySelector('.logo').classList.add('sleeping');
+      }, 6000);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="background"></div>
+    <div class="ribbon">
+      <img class="logo" src="logo.png" alt="Logó">
+      <div class="text">
+        Kedves Családunk/Barátaink!<br>
+        2025. 09. 19-én hivatalosan is összekötjük életünket. Ennek örömére szeretnénk titeket meghívni egy közös ünneplésre.<br>
+        Részleteket később küldünk, de kérünk, hogy mielőbb jelezzétek vissza nekünk a <strong>PetiEsAndiNagyNapja@gmail.com</strong> e-mail címen, hogy részt tudtok-e venni.
+      </div>
+    </div>
+    <img class="cat" src="cat.png" alt="Doromboló cica">
+    <audio autoplay loop>
+      <source src="purring.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</body>
+</html>
