@@ -32,7 +32,6 @@
       position: absolute;
       top: -100%;
       left: 0;
-      width: 33%;
       height: 100%;
       background: rgba(0, 0, 0, 0.75);
       padding: 0;
@@ -40,11 +39,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      animation: slideDown 2s ease-out forwards;
-      animation-delay: 2s;
       z-index: 10;
       overflow-y: auto;
       box-sizing: border-box;
+      animation: slideDown 2s ease-out forwards;
+      animation-delay: 0.5s;
+      width: 33%;
     }
     .ribbon .logo {
       width: 70%;
@@ -54,16 +54,41 @@
     }
     .ribbon .text {
       width: 70%;
-      font-size: 1.4rem;
-      line-height: 1.8;
+      font-size: 1.3rem;
+      line-height: 1.7;
       text-align: justify;
       color: #a8925d;
     }
+
+    @media screen and (max-width: 768px) and (orientation: portrait) {
+      .ribbon {
+        width: 100%;
+        height: auto;
+        top: 0;
+        animation: slideDownMobile 2s ease-out forwards;
+      }
+    }
+
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      .ribbon {
+        width: 50%;
+        height: 100%;
+        top: -100%;
+        animation: slideDown 2s ease-out forwards;
+      }
+    }
+
     @keyframes fadeIn {
       to { opacity: 1; }
     }
+
     @keyframes slideDown {
       to { top: 0; }
+    }
+
+    @keyframes slideDownMobile {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
     }
   </style>
 </head>
@@ -75,11 +100,11 @@
       <div class="text">
         Mi történik, ha Peti és Andi egymásra néznek, és azt mondják:<br>
         „Na jó, legyen esküvő”?<br>
-        Hát az, hogy 2025. szeptember 19-én esküvő lesz! <br><br>
+        Hát az, hogy 2025. szeptember 19-én esküvő lesz!<br><br>
         A helyszín még meglepi (vagy káosz), de ígérjük: jó lesz!<br>
         És tudod mi még jobb? Ha Te is ott vagy!<br><br>
         Szóval kérünk szépen: írj egy mailt, hogy számíthatunk-e rád:<br>
-        📧 <strong>PetiEsAndiNagyNapja@gmail.com</strong><br>
+        📧 <strong>PetiEsAndiNagyNapja@gmail.com</strong>
       </div>
     </div>
   </div>
