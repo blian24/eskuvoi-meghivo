@@ -36,22 +36,28 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.6);
       color: white;
-      padding: 30px;
-      text-align: justify;
-      font-size: 1.4rem;
-      line-height: 1.8;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       animation: slideDown 2s ease-out forwards;
       animation-delay: 2s;
       z-index: 10;
       overflow-y: auto;
+      box-sizing: border-box;
     }
     .ribbon .logo {
-      display: block;
-      margin: 0 auto 5px auto;
-      width: 90%;
+      width: 70%;
       height: auto;
+      margin: 10% 0 2% 0;
       border: none;
+    }
+    .ribbon .text {
+      width: 70%;
+      font-size: 1.6rem;
+      line-height: 1.9;
+      text-align: justify;
     }
     @keyframes fadeIn {
       to { opacity: 1; }
@@ -66,9 +72,11 @@
     <div class="background"></div>
     <div class="ribbon">
       <img class="logo" src="logo.png" alt="Logó">
-      Kedves Családunk/Barátaink!<br>
-      2025. 09. 19-én hivatalosan is összekötjük életünket. Ennek örömére szeretnénk titeket meghívni egy közös ünneplésre.<br>
-      Részleteket később küldünk, de kérünk, hogy mielőbb jelezzétek vissza nekünk a <strong>PetiEsAndiNagyNapja@gmail.com</strong> e-mail címen, hogy részt tudtok-e venni.
+      <div class="text">
+        Kedves Családunk/Barátaink!<br>
+        2025. 09. 19-én hivatalosan is összekötjük életünket. Ennek örömére szeretnénk titeket meghívni egy közös ünneplésre.<br>
+        Részleteket később küldünk, de kérünk, hogy mielőbb jelezzétek vissza nekünk a <strong>PetiEsAndiNagyNapja@gmail.com</strong> e-mail címen, hogy részt tudtok-e venni.
+      </div>
     </div>
   </div>
 </body>
