@@ -25,10 +25,12 @@
       height: 100%;
       background: url('20240922_125624.jpg') no-repeat center center;
       background-size: cover;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
     }
     .ribbon {
       position: absolute;
-      top: 0;
+      top: -100%;
       left: 0;
       width: 33%;
       height: 100%;
@@ -41,6 +43,8 @@
       z-index: 10;
       overflow-y: auto;
       box-sizing: border-box;
+      animation: slideDown 2s ease-out forwards;
+      animation-delay: 0.5s;
     }
     .ribbon .logo {
       width: 70%;
@@ -50,10 +54,16 @@
     }
     .ribbon .text {
       width: 70%;
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.4rem;
+      line-height: 1.8;
       text-align: justify;
       color: #a8925d;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      to { top: 0; }
     }
   </style>
 </head>
