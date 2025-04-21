@@ -28,37 +28,47 @@
       opacity: 0;
       animation: fadeIn 2s ease-in forwards;
     }
-    .text {
+    .ribbon {
       position: absolute;
-      bottom: 10%;
+      top: -100%;
+      left: 0;
       width: 100%;
-      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
       color: white;
-      font-size: 2.5rem;
-      opacity: 0;
-      animation: fadeInText 2s ease-in forwards;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      animation: slideDown 2s ease-out forwards;
       animation-delay: 2s;
+      z-index: 10;
     }
-    .logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
+    .ribbon .logo {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 80px;
       height: auto;
+      margin-bottom: 10px;
     }
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-    @keyframes fadeInText {
-      to { opacity: 1; }
+    @keyframes slideDown {
+      to { top: 0; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="background"></div>
-    <img class="logo" src="logo.png" alt="Logó">
-    <div class="text">2025. Szeptember 19.</div>
+    <div class="ribbon">
+      <img class="logo" src="logo.png" alt="Logó">
+      Kedves Családunk/Barátaink!<br>
+      2025. 09. 19-én hivatalosan is összekötjük életünket. Ennek örömére szeretnénk titeket meghívni egy közös ünneplésre.<br>
+      Részleteket később küldünk, de kérünk, hogy mielőbb jelezzétek vissza nekünk a <strong>PetiEsAndiNagyNapja@gmail.com</strong> e-mail címen, hogy részt tudtok-e venni.
+    </div>
   </div>
 </body>
 </html>
