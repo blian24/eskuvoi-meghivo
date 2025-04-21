@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Esküvői Meghívó</title>
   <style>
-    body, html {
+    html {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
-      overflow: hidden;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      width: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
     }
     .container {
       position: relative;
@@ -40,11 +46,12 @@
       align-items: center;
       justify-content: flex-start;
       z-index: 10;
-      overflow-y: auto;
       box-sizing: border-box;
       animation: slideDown 2s ease-out forwards;
       animation-delay: 0.5s;
       width: 33%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .ribbon .logo {
       width: 70%;
@@ -58,14 +65,19 @@
       line-height: 1.7;
       text-align: justify;
       color: #a8925d;
+      margin-bottom: 40px;
     }
 
     @media screen and (max-width: 768px) and (orientation: portrait) {
       .ribbon {
         width: 100%;
-        height: auto;
+        height: 100%;
         top: 0;
         animation: slideDownMobile 2s ease-out forwards;
+        overflow-y: auto;
+      }
+      body {
+        overflow: auto;
       }
     }
 
