@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esküvői Meghívó</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+    }
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('20240922_125624.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    .ribbon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 33%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: 10;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+    .ribbon .logo {
+      width: 70%;
+      height: auto;
+      margin: 10% 0 2% 0;
+      border: none;
+    }
+    .ribbon .text {
+      width: 70%;
+      font-size: 1.6rem;
+      line-height: 1.9;
+      text-align: justify;
+      color: #a8925d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background"></div>
+    <div class="ribbon">
+      <img class="logo" src="logo.png" alt="Logó">
+      <div class="text">
+        🐱 <strong>4. Cuki és bohókás verzió</strong><br>
+        Mi történik, ha Peti és Andi egymásra néznek, és azt mondják:<br>
+        „Na jó, legyen esküvő”?<br>
+        Hát az, hogy 2025. szeptember 19-én esküvő lesz! 🎉<br><br>
+        A helyszín még meglepi (vagy káosz), de ígérjük: jó lesz!<br>
+        És tudod mi még jobb? Ha Te is ott vagy!<br><br>
+        Szóval kérünk szépen: írj egy mailt, hogy számíthatunk-e rád:<br>
+        📧 <strong>PetiEsAndiNagyNapja@gmail.com</strong><br>
+        Gyere, és nézd meg, ahogy két ember hivatalosan is bevállalja egymást! 💑
+      </div>
+    </div>
+  </div>
+</body>
+</html>
